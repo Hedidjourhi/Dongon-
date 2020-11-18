@@ -1,0 +1,7 @@
+C:\projets\algo\algo\tp labirynthe\labyrinthe29\labyrinthe1\obj\Debug\labyrinthe1.csprojAssemblyReference.cache
+C:\projets\algo\algo\tp labirynthe\labyrinthe29\labyrinthe1\obj\Debug\labyrinthe1.csproj.CoreCompileInputs.cache
+C:\projets\algo\algo\tp labirynthe\labyrinthe29\labyrinthe1\bin\Debug\labyrinthe1.exe.config
+C:\projets\algo\algo\tp labirynthe\labyrinthe29\labyrinthe1\bin\Debug\labyrinthe1.exe
+C:\projets\algo\algo\tp labirynthe\labyrinthe29\labyrinthe1\bin\Debug\labyrinthe1.pdb
+C:\projets\algo\algo\tp labirynthe\labyrinthe29\labyrinthe1\obj\Debug\labyrinthe1.exe
+C:\projets\algo\algo\tp labirynthe\labyrinthe29\labyrinthe1\obj\Debug\labyrinthe1.pdb
