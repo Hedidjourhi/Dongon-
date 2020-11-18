@@ -138,15 +138,7 @@ namespace labyrinthv2
         {
 
             Console.OutputEncoding = Encoding.UTF8;
-
-
-
-            Console.WriteLine("*********************************************");
-            Console.WriteLine("************ Welcome to the MAZE ************");
-            Console.WriteLine("*********************************************");
-            Console.WriteLine("");
-            Console.WriteLine("You are lost inside a Maze, try to escape...");
-
+            Intro();
 
             bool gameRunning = true;
             int room_number = 2;
@@ -170,9 +162,7 @@ namespace labyrinthv2
                 }
                 else if (room_number == 4)
                 {
-                    Console.WriteLine(">>>>>>>>>>>> It's a trap... you are DEAD :/");
-                    Console.WriteLine("");
-                    Console.ReadKey();
+                    Loose();
                     gameRunning = false;
                 }
                 else if (room_number == 5)
@@ -183,11 +173,32 @@ namespace labyrinthv2
 
                 else if (room_number == 6)
                 {
-                    Console.WriteLine(">>>>>>>>>>>> You found the EXIT...Congratulations:)");
-                    Console.ReadKey();
+                    Win();
                     gameRunning = false;
                 }
             }
+        }
+
+        private static void Loose()
+        {
+            Console.WriteLine(">>>>>>>>>>>> It's a trap... you are DEAD :/");
+            Console.WriteLine("");
+            Console.ReadKey();
+        }
+
+        private static void Win()
+        {
+            Console.WriteLine(">>>>>>>>>>>> You found the EXIT...Congratulations:)");
+            Console.ReadKey();
+        }
+
+        private static void Intro()
+        {
+            Console.WriteLine("*********************************************");
+            Console.WriteLine("************ Welcome to the MAZE ************");
+            Console.WriteLine("*********************************************");
+            Console.WriteLine("");
+            Console.WriteLine("You are lost inside a Maze, try to escape...");
         }
     }
 }
