@@ -8,159 +8,193 @@ namespace labyrinthv2
 {
     class Program
     {
+
+
+
+        static int room1(int roomID)
+        {
+            Console.WriteLine("There are 2 doors in your room: (e)ast and (n)orth, where do you want to go ? ");
+            Console.WriteLine("╔═════╣ n ╠═════╗");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("║       ▲       ╩");
+            Console.WriteLine("║       ☻ ►     e");
+            Console.WriteLine("║               ╦");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("╚═══════════════╝");
+
+            string choice = Console.ReadLine();
+            if (choice == "n")
+            {
+                Console.Clear();
+                Console.WriteLine("> going to north...");
+                roomID = 4;
+            }
+            else if (choice == "e")
+            {
+                Console.Clear();
+                Console.WriteLine("> going to east...");
+                roomID = 2;
+            }
+            else
+            {
+                Console.WriteLine("THIS CHOICE DOESN'T EXIST!");
+            }
+            return roomID;
+        }
+
+        static int room2(int roomID)
+        {
+
+            Console.WriteLine("There are 3 doors in your room: (n)orth,(w)est, (e)ast, where do you want to go ? ");
+            Console.WriteLine("╔═════╣ n ╠═════╗");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("╩       ▲       ╩");
+            Console.WriteLine("w     ◄ ☻ ►     e");
+            Console.WriteLine("╦               ╦");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("╚═══════════════╝");
+            string choice = Console.ReadLine();
+            if (choice == "n")
+            {
+                Console.Clear();
+                Console.WriteLine("> going to north...");
+                roomID = 5;
+            }
+            else if (choice == "w")
+            {
+                Console.Clear();
+                Console.WriteLine("> going to west...");
+                roomID = 1;
+            }
+            else if (choice == "e")
+            {
+
+                Console.Clear();
+                Console.WriteLine("> going to east...");
+                roomID = 3;
+            }
+            else
+            {
+                Console.WriteLine("THIS CHOICE DOESN'T EXIST!");
+            }
+            return roomID;
+        }
+        static int room3(int roomID)
+        {
+            //TODO: complete
+            Console.WriteLine("There are 2 doors in this room where do you want to go ? ");
+            Console.WriteLine("╔═════╣ n ╠═════╗");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("╩       ▲       ║");
+            Console.WriteLine("w     ◄ ☻       ║");
+            Console.WriteLine("╦               ║");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("╚═══════════════╝");
+            string choice = Console.ReadLine();
+            if (choice == "n")
+            {
+                Console.Clear();
+                Console.WriteLine("> going to north...");
+                roomID = 6;
+            }
+            if (choice == "w")
+            {
+                Console.Clear();
+                Console.WriteLine("> going east at the begining");
+                roomID = 2;
+            }
+            return roomID;
+        }
+
+        static int room5(int roomID)
+        {
+            Console.WriteLine("There are 1 door in your room: (s)outh, where do you want to go ? ");
+            Console.WriteLine("╔═══════════════╗");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("║       ▲       ║");
+            Console.WriteLine("║       ☻ ►     ║");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("║               ║");
+            Console.WriteLine("╚══════╣ s ╠════╝");
+
+            string choice = Console.ReadLine();
+            if (choice == "s")
+            {
+                Console.Clear();
+                Console.WriteLine("> going to south...");
+                roomID = 2;
+            }
+            
+            else
+            {
+                Console.WriteLine("THIS CHOICE DOESN'T EXIST!");
+            }
+            return roomID;
+        }
+
+
+
         static void Main(string[] args)
         {
+
+            Console.OutputEncoding = Encoding.UTF8;
+
+
+
+            Console.WriteLine("*********************************************");
+            Console.WriteLine("************ Welcome to the MAZE ************");
+            Console.WriteLine("*********************************************");
+            Console.WriteLine("");
+            Console.WriteLine("You are lost inside a Maze, try to escape...");
+
+
+            bool gameRunning = true;
+            int room_number = 2;
+            while (gameRunning)
             {
-                Console.OutputEncoding = Encoding.UTF8;
-
-
-
-                Console.WriteLine("*********************************************");
-                Console.WriteLine("************ Welcome to the MAZE ************");
-                Console.WriteLine("*********************************************");
-                Console.WriteLine("");
-                Console.WriteLine("You are lost inside a Maze, try to escape...");
-
-
-                bool gameRunning = true;
-                int room_number = 2;
-                while (gameRunning)
+                if (room_number == 1)
                 {
-                    if (room_number == 1)
+                    room_number = room1(room_number);
+                }
+                else if (room_number == 2)
+                {
+                    room_number = room2(room_number);
+                }
+                else if (room_number == 3)
+                {
 
-                    {
-                        Console.WriteLine("There are 2 doors in your room: (e)ast, where do you want to go ? ");
-                        Console.WriteLine("╔═════╣ n ╠═════╗");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("║       ▲       ╩");
-                        Console.WriteLine("║       ☻ ►     e");
-                        Console.WriteLine("║               ╦");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("╚═══════════════╝");
-
-                        string choice = Console.ReadLine();
-                        if (choice == "n")
-                        {
-                            Console.Clear();
-                            Console.WriteLine("> going to north...");
-                            room_number = 4;
-                        }
-                        else if (choice == "e")
-                        {
-                            Console.Clear();
-                            Console.WriteLine("> going to east...");
-                            room_number = 2;
-                        }
-                        else
-                        {
-                            Console.WriteLine("THIS CHOICE DOESN'T EXIST!");
-                        }
-                    }
-                    else if (room_number == 2)
-                    {
-                        Console.WriteLine("There are 3 doors in your room: (n)orth,(w)est, (e)ast, where do you want to go ? ");
-                        Console.WriteLine("╔═════╣ n ╠═════╗");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("╩       ▲       ╩");
-                        Console.WriteLine("w     ◄ ☻ ►     e");
-                        Console.WriteLine("╦               ╦");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("╚═══════════════╝");
-                        string choice = Console.ReadLine();
-                        if (choice == "n")
-                        {
-                            Console.Clear();
-                            Console.WriteLine("> going to north...");
-                            room_number = 5;
-                        }
-                        else if (choice == "w")
-                        {
-                            Console.Clear();
-                            Console.WriteLine("> going to west...");
-                            room_number = 1;
-                        }
-                        else if (choice == "e")
-                        {
-
-                            Console.Clear();
-                            Console.WriteLine("> going to east...");
-                            room_number = 3;
-                        }
-                        else
-                        {
-                            Console.WriteLine("THIS CHOICE DOESN'T EXIST!");
-                        }
-                    }
-                    else if (room_number == 3)
-                    {
-                        //TODO: complete
-                        Console.WriteLine("There are 2 doors in this room where do you want to go ? ");
-                        Console.WriteLine("╔═════╣ n ╠═════╗");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("╩       ▲       ║");
-                        Console.WriteLine("w     ◄ ☻       ║");
-                        Console.WriteLine("╦               ║");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("╚═══════════════╝");
-                        string choice = Console.ReadLine();
-                        if (choice == "n")
-                        {
-                            Console.Clear();
-                            Console.WriteLine("> going to north...");
-                            room_number = 6;
-                        }
-                        if (choice == "w")
-                        {
-                            Console.Clear();
-                            Console.WriteLine("> going east at the begining");
-                            room_number = 2;
-                        }
-
-
-                    }
-                    else if (room_number == 4)
-                    {
-                        Console.WriteLine(">>>>>>>>>>>> It's a trap... you are DEAD :/");
-                        Console.WriteLine("");
-                        Console.ReadKey();
-                        gameRunning = false;
-                    }
-                    else if (room_number == 5)
-                    {
-                        //TODO: complete
-                        Console.WriteLine("There are no other room here go back !");
-                        Console.WriteLine("╔═══════════════╗");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("║       ☻       ║");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("║               ║");
-                        Console.WriteLine("╚═════╣ s ╠═════╝");
-                        string choice = Console.ReadLine();
-                        if (choice == "s")
-
-                            Console.Clear();
-                        Console.WriteLine("> going to where its all starting...");
-                        room_number = 2;
+                    room_number = room3(room_number);
 
 
 
+                }
+                else if (room_number == 4)
+                {
+                    Console.WriteLine(">>>>>>>>>>>> It's a trap... you are DEAD :/");
+                    Console.WriteLine("");
+                    Console.ReadKey();
+                    gameRunning = false;
+                }
+                else if (room_number == 5)
+                {
+                    room_number = room5(room_number);
 
+                }
 
-
-                    }
-
-                    else if (room_number == 6)
-                    {
-                        Console.WriteLine(">>>>>>>>>>>> You found the EXIT...Congratulations:)");
-                        Console.ReadKey();
-                        gameRunning = false;
-                    }
+                else if (room_number == 6)
+                {
+                    Console.WriteLine(">>>>>>>>>>>> You found the EXIT...Congratulations:)");
+                    Console.ReadKey();
+                    gameRunning = false;
                 }
             }
         }
     }
+}
 
-}
-    }
-}
+
+
+
+
+
+
