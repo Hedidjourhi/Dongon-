@@ -103,26 +103,41 @@ namespace labyrinthv2
 
             List<Dictionary<string, int>> roomsDirections = new List<Dictionary<string, int>>();
             roomsDirections.Add(new Dictionary<string, int>() {
-             { "n", 3 },
+             // room 0
+             { "n", 5 },
              { "e", 1 }
             });
             roomsDirections.Add(new Dictionary<string, int>() {
-             { "n", 4 },
+             //room 1
+             { "n", 6 },
              { "w", 0 },
              { "e", 2 }
             });
             roomsDirections.Add(new Dictionary<string, int>() {
-             { "n", 5 },
-             { "w", 1 }
+             //room 2
+             { "n", 7 },
+             { "w", 1 },
+             { "e", 3 }
             });
             roomsDirections.Add(new Dictionary<string, int>() {
-             { "s", 0 }
+             //room 3
+             { "e", 4 },
+             {"w", 3 },
             });
             roomsDirections.Add(new Dictionary<string, int>() {
-             { "s", 1 }
+             //room 4 
+                { "s", 1 }
             });
             roomsDirections.Add(new Dictionary<string, int>() {
-             { "s", 2 }
+             //room 5
+             { "n", 6 },
+                {"" }
+             });
+            
+            roomsDirections.Add(new Dictionary<string, int>() {
+             { "n",6  },
+               {"e",2 }
+
             });
             Console.OutputEncoding = Encoding.UTF8;
             Intro();
